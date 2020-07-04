@@ -25,6 +25,7 @@ class stickyHeader {
             this.siteHeader.classList.add("site-header--dark")
         } else {
             this.siteHeader.classList.remove("site-header--dark")
+            document.querySelectorAll('.primary-nav a').forEach(el => el.classList.remove("is-current-link"))
         }
 
         this.pageSections.forEach(el => this.calcSection(el))
